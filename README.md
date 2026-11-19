@@ -85,7 +85,7 @@ titanic-survival-prediction/
 ## Reproduire les résultats
 
 ```bash
-git clone https://github.com/<votre-compte>/titanic-survival-prediction.git
+git clone https://github.com/<wahibmahamoudhassan>/titanic-survival-prediction.git
 cd titanic-survival-prediction
 python -m venv .venv && source .venv/bin/activate     # Windows : .venv\Scripts\activate
 pip install -r requirements-dev.txt
