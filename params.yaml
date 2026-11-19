@@ -1,0 +1,24 @@
+# Configuration de l'expérience — modifier ici, pas dans le code
+seed: 42
+data:
+  path: data/raw/titanic.csv
+  target: Survived
+  test_size: 0.20            # hold-out stratifié, consulté une seule fois
+
+cv:
+  n_splits: 5
+  n_repeats: 5               # validation croisée stratifiée répétée (25 plis)
+
+selection_metric: accuracy   # métrique officielle de la compétition Kaggle
+
+models:
+  logistic_regression:
+    classifier__C: [0.03, 0.1, 0.3, 1.0, 3.0]
+  random_forest:
+    classifier__n_estimators: [300]
+    classifier__max_depth: [4, 6, 8, null]
+    classifier__min_samples_leaf: [1, 3, 5]
+  gradient_boosting:
+    classifier__learning_rate: [0.03, 0.1]
+    classifier__max_depth: [2, 3]
+    classifier__max_iter: [100, 300]

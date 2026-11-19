@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# Modèle entraîné : régénéré par `make train` (les métriques, elles, sont versionnées)
+models/model.joblib
+submission.csv

@@ -1,0 +1,94 @@
+{
+  "model": "random_forest",
+  "version": "1.0.0",
+  "selection": "accuracy moyenne en validation croisée répétée (25 plis) sur le train",
+  "best_params": {
+    "logistic_regression": {
+      "C": 1.0
+    },
+    "random_forest": {
+      "max_depth": 8,
+      "min_samples_leaf": 1,
+      "n_estimators": 300
+    },
+    "gradient_boosting": {
+      "learning_rate": 0.1,
+      "max_depth": 2,
+      "max_iter": 300
+    }
+  },
+  "cv": {
+    "baseline_majority": {
+      "mean": 0.6165763813651137,
+      "std": 0.0027494209188406154
+    },
+    "baseline_gender": {
+      "mean": 0.7893469910371319,
+      "std": 0.03153742160923014
+    },
+    "logistic_regression": {
+      "mean": 0.8258524574017531,
+      "std": 0.04188838070573794
+    },
+    "random_forest": {
+      "mean": 0.8340076824583866,
+      "std": 0.034096315568177035
+    },
+    "gradient_boosting": {
+      "mean": 0.8326051413375357,
+      "std": 0.029794920581013323
+    }
+  },
+  "test": {
+    "baseline_majority": {
+      "accuracy": 0.6145251396648045,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "brier": 0.3854748603351955
+    },
+    "baseline_gender": {
+      "accuracy": 0.776536312849162,
+      "precision": 0.7377049180327869,
+      "recall": 0.6521739130434783,
+      "f1": 0.6923076923076923,
+      "roc_auc": 0.7533596837944663,
+      "brier": 0.22346368715083798
+    },
+    "logistic_regression": {
+      "accuracy": 0.8491620111731844,
+      "precision": 0.8181818181818182,
+      "recall": 0.782608695652174,
+      "f1": 0.8,
+      "roc_auc": 0.8674571805006588,
+      "brier": 0.13153656466180827
+    },
+    "random_forest": {
+      "accuracy": 0.8100558659217877,
+      "precision": 0.8070175438596491,
+      "recall": 0.6666666666666666,
+      "f1": 0.7301587301587301,
+      "roc_auc": 0.8457839262187088,
+      "brier": 0.13991087795402876
+    },
+    "gradient_boosting": {
+      "accuracy": 0.8044692737430168,
+      "precision": 0.8035714285714286,
+      "recall": 0.6521739130434783,
+      "f1": 0.72,
+      "roc_auc": 0.8320158102766799,
+      "brier": 0.14986810668143072
+    }
+  },
+  "test_accuracy_ci95": [
+    0.7486033519553073,
+    0.8659217877094972
+  ],
+  "n_train": 712,
+  "n_test": 179,
+  "environment": {
+    "python": "3.12.3",
+    "scikit-learn": "1.9.1"
+  }
+}
