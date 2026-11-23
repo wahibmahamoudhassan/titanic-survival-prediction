@@ -87,12 +87,12 @@ titanic-survival-prediction/
 ```bash
 git clone https://github.com/<wahibmahamoudhassan>/titanic-survival-prediction.git
 cd titanic-survival-prediction
-python -m venv .venv && source .venv/bin/activate     # Windows : .venv\Scripts\activate
+python -m venv .venv && source .venv/bin/activate     
 pip install -r requirements-dev.txt
 
-make train      # ≈ 1 min : modèles, métriques (models/metrics.json) et figures
-make test       # 12 tests
-make notebook   # ouvre les notebooks
+make train      #  métriques (models/metrics.json) et figures
+make test      
+make notebook   
 ```
 
 Sans `make` (Windows) : `set PYTHONPATH=src` puis `python -m titanic.train` et `python -m pytest`.
@@ -100,7 +100,7 @@ Sans `make` (Windows) : `set PYTHONPATH=src` puis `python -m titanic.train` et `
 **Soumission Kaggle** : télécharger `test.csv` depuis la compétition, puis
 
 ```bash
-make predict INPUT=test.csv      # écrit submission.csv (PassengerId, Survived)
+make predict INPUT=test.csv     
 ```
 
 ## Limites et pistes
